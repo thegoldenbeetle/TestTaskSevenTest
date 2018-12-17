@@ -7,7 +7,6 @@
 #include <exception>
 
 Client::Client(int argc, char** argv) {
-    
     orb = CORBA::ORB_init(argc, argv);
     obj = orb->string_to_object(argv[1]);
 
@@ -25,7 +24,8 @@ CORBA::Short Client::sendMessage(
 
     StringSeq_var resultArray;    
     CORBA::Short result = dataRef->reverseStrings(vectorToSeq<StringSeq>(inputArray), resultArray);
-    outputArray = secToVector<StringSeq>(resultArray); 
+    if (result == 1)
+        outputArray = secToVector<StringSeq>(resultArray); 
     
     return result;
 }

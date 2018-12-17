@@ -5,6 +5,7 @@
 
 class Server : public POA_Data::Array {
 public:
+
     inline Server() {}
     virtual ~Server() {}
     virtual CORBA::Short reverseStrings(const StringSeq& stringArray,

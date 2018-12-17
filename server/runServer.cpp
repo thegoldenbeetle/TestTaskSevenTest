@@ -29,5 +29,6 @@ int main(int argc, char** argv) {
     catch (CORBA::Exception& ex) {
         std::cerr << "Caught CORBA::Exception: " << ex._name() << "\n";
     }
+    
     return 0;
 }

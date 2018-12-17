@@ -16,7 +16,9 @@ public:
     ~Client();
 
 private:
+
     CORBA::ORB_var orb;
     CORBA::Object_var obj;
     Data::Array_var dataRef;        
+
 };

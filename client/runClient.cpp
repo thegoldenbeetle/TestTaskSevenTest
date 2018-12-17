@@ -21,9 +21,8 @@ void printStringArray(const std::vector<std::string>& array) {
 }
 
 int main(int argc, char** argv) {
-    
     try {
-
+        
         if (argc != 2) {
             std::cerr << "Usage: runClient [IOR]\n";
             return 1;
@@ -39,7 +38,7 @@ int main(int argc, char** argv) {
             std::cout << "Array with reversed strings:\n";
             printStringArray(resultStrings);
         } else {
-            std::cout << "No answer from server\n";
+            std::cout << "Bad answer from server\n";
         };
 
     }
