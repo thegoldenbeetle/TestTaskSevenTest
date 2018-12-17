@@ -9,6 +9,7 @@ all: server client
 
 $(STUBS): data.idl
 	omniidl -bcxx data.idl
+	mkdir shared
 	mv dataSK.cc data.hh shared/
 
 server: $(SERVER_DIR)/runServer.cpp $(STUBS)
