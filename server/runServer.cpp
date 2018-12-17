@@ -1,28 +1,5 @@
-#include "data.hh"
-#include <omniconfig.h>			
-#include <string>
-#include <vector>
-#include <iostream> 
-#include <algorithm>
-#include "utils/convert_utils.h"
-
-class Server : public POA_Data::Array {
-public:
-    inline Server() {}
-    virtual ~Server() {}
-    virtual StringSeq* reverseStrings(const StringSeq& stringArray);
-};
-
-StringSeq* Server::reverseStrings(const StringSeq& stringArray) {
-
-    std::vector<std::string> strings = secToVector<StringSeq>(stringArray);
-    for (std::string& str: strings) {
-        std::reverse(begin(str), end(str));
-    }
-    StringSeq* result = new StringSeq();
-    *result = vectorToSeq<StringSeq>(strings);
-    return result;
-}
+#include "server.h"
+#include <iostream>
 
 int main(int argc, char** argv) {
     

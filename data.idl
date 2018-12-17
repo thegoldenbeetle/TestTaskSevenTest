@@ -1,6 +1,7 @@
 typedef sequence<string> StringSeq;
 module Data {
     interface Array {
-        StringSeq reverseStrings(in StringSeq stringArray);
+        short reverseStrings(in StringSeq stringArray,
+                             out StringSeq stringReversedArray);
     };
 };
